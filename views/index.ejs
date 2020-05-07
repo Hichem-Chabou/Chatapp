@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +10,25 @@
   <script defer src="socket.io/socket.io.js"></script>
   <script defer src="script.js"></script>
 </head>
+
 <body id="rooms">
   <div class="rooms">
-      <h1>Chat App</h1>
-      <form id="room-form" action="/room" method="POST">
-        <input name="room" type="text" required>
-        <button type="submit">New Room</button>
-      </form>
+    <h1>Chat App</h1>
+    <form id="room-form" action="/room" method="POST">
+      <input name="room" type="text" required>
+      <button type="submit">New Room</button>
+    </form>
 
     <div id="room-container">
       <h2>Existing rooms</h2>
-      <% Object.keys(rooms).forEach(room => { %>
+      <div class="existing-rooms">
+        <% Object.keys(rooms).forEach(room => { %>
         <div><%= room %></div>
-        <a href="/<%= room %>">Join</a>
-      <% }) %>
+        <button type="submit" class="btn"><a href="/<%= room %>">Join</a></button>
+        <% }) %>
+      </div>
     </div>
   </div>
 </body>
+
 </html>
