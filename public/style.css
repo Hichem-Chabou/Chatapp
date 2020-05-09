@@ -69,9 +69,6 @@ button:hover {
     flex-grow: 1;
 }
 
-#rooms {
-}
-
 .rooms {
     display: flex;
     flex-direction: column;
