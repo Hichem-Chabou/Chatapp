@@ -3,7 +3,7 @@ body {
     margin: 0;
     display: flex;
     justify-content: center;
-    background: #f5f5f5;
+    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 }
 
 a {
@@ -19,7 +19,7 @@ button {
     border-radius: 5px;
     background: rgb(160, 55, 221);
     cursor: pointer;
-    opacity: .9;
+    opacity: 0.9;
     transition: 200ms;
 }
 
@@ -39,17 +39,16 @@ button:hover {
     margin: 0 5px 0 0;
 }
 
-
 #message-container {
     width: 75%;
     max-width: 1000px;
     max-height: 80vh;
     overflow-y: scroll;
     margin: 10vh 0 0 0;
+    background: #f5f5f5;
 }
 
 #message-container div {
-    background-color: rgb(118, 213, 230);
     padding: 5px;
 }
 
@@ -70,6 +69,9 @@ button:hover {
     flex-grow: 1;
 }
 
+#rooms {
+}
+
 .rooms {
     display: flex;
     flex-direction: column;
@@ -77,7 +79,6 @@ button:hover {
     width: 25vw;
     padding: 0 10px;
     text-align: center;
-    background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
 }
 
 #room-container {
@@ -102,9 +103,6 @@ button:hover {
     padding: 5px 10px;
     margin: 0 10px 10px 0;
 }
-
-
-
 
 #room-form {
     margin: 20px 0;
