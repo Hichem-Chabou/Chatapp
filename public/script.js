@@ -6,16 +6,22 @@ const messageInput = document.getElementById('message-input');
 
 if (messageForm != null) {
   const name = prompt('What is your name?');
-  appendMessage('You joined');
-  socket.emit('new-user', roomName, name);
+  if(!name) {
+    name.required = true;
+  }
+  else {
+    appendMessage('You joined');
+    socket.emit('new-user', roomName, name);
+  
+    messageForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const message = messageInput.value;
+      appendMessage(`You: ${message}`);
+      socket.emit('send-chat-message', roomName, message);
+      messageInput.value = '';
+    })
+  }
 
-  messageForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const message = messageInput.value;
-    appendMessage(`You: ${message}`);
-    socket.emit('send-chat-message', roomName, message);
-    messageInput.value = '';
-  })
 }
 
 socket.on('room-created', room => {
