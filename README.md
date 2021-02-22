@@ -1,6 +1,8 @@
 # Chatapp
  Chatapp is a Realtime chat app made with express and socket.io.  
- Demo: https://basic-socket-chat.herokuapp.com/
+ 
+## Demo  
+Here's a live demo: https://basic-socket-chat.herokuapp.com/  
  
 ## Installation
 
