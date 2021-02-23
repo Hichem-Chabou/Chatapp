@@ -3,6 +3,11 @@
  
 ## Demo  
 Here's a live demo: https://basic-socket-chat.herokuapp.com/  
+
+## Built With  
+* [Node](https://nodejs.org/)  
+* [Express](https://expressjs.com/)  
+* [Socket.IO](https://socket.io/)  
  
 ## Installation
 
