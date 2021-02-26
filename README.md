@@ -23,4 +23,7 @@ $ npm install
 $ npm start
 ```
 
-Then go to http://localhost:3000/ to view the app
+Then go to http://localhost:3000/ to view the app  
+
+## License :scroll:  
+[MIT](https://github.com/Hichem-Chabou/Chatapp/blob/master/LICENSE)
